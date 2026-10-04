@@ -1,0 +1,74 @@
+@startuml trainu_db
+
+class company {
+    id: int
+    name: string
+}
+
+class users {
+  id: int
+  username: string
+  email: string
+  image_url: string
+  linkedin_url: string
+  interested_in: [course_id]
+}
+
+class teams {
+  id: int
+  name: string
+}
+
+class courses {
+  id: int
+  title: string
+  description: string
+  image_url: string
+  duration_hours: int
+  type: string
+  format: string
+  capacity: int
+  skill_tags: [string]
+}
+
+class session {
+    id: int
+    date: datetime
+    duration_minutes: int
+    location: string
+    description: string
+}
+
+class enrollment {
+    status: string
+    attendance: [boolean]
+    enrolled_at: datetime
+    completed_at: datetime
+}
+
+class job {
+    id: int
+    title: string
+    description: string
+}
+
+class review {
+    id: int
+    rating: int
+    comment: string
+}
+
+
+users "1" -- "1..*" job
+users "1" -- "0..*" review
+review "*" -- "1" courses
+company "1" -l- "1..*" users
+teams "1..*" -- "1" company
+teams "1  " -- "  1..*" users : members
+teams "1" -- "1" users : team_leader
+session "1..*" -- "1" courses
+enrollment "1" -- "1" users : enrolled
+enrollment "0..* " -- "1  " courses
+enrollment "0..*" -- "0..*" session : session_attendance
+
+@enduml

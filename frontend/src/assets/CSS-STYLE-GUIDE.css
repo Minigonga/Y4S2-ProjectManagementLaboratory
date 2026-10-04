@@ -1,0 +1,40 @@
+/* 
+  ╔══════════════════════════════════════════════════════════════════════════╗
+  ║              TRAINU+ CSS DESIGN SYSTEM - STYLE GUIDE                     ║
+  ║                   (Based on Training.css Reference)                      ║
+  ║                  For consistent UI/UX across all pages                   ║
+  ╚══════════════════════════════════════════════════════════════════════════╝
+*/
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COLORS (Core Palette)
+   ═════════════════════════════════════════════════════════════════════════ */
+:root {
+  /* Backgrounds */
+  --bg-primary: #f3f4f6;
+  --bg-card: #ffffff;
+  --bg-secondary: #fafafa;
+  
+  /* Primary Colors */
+  --color-primary-dark: #094074;
+  --color-primary: #0f4c81;
+  --color-primary-light: #eaf0f7;
+  
+  /* Accent Colors */
+  --color-accent: #f59e0b;
+  --color-success: #28a745;
+  --color-info: #007bff;
+  
+  /* Text Colors */
+  --text-primary: #222222;
+  --text-secondary: #666666;
+  --text-light: #888888;
+  --text-lighter: #cccccc;
+  
+  /* Borders */
+  --border-color: #e3e3e3;
+  --border-light: #e5e5e5;
+  
+  /* Logo Brand Color */
+  --brand-orange: #f58220;
+}

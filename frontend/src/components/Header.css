@@ -1,0 +1,331 @@
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0.875rem 2rem;
+  border-bottom: 1px solid #dfe5ec;
+  background: #f3f3f3;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+  color: #0f4e8b;
+}
+
+.brand-logo {
+  height: 2rem;
+  width: auto;
+  display: block;
+}
+
+.brand-plus {
+  margin-left: 0.1rem;
+  color: #ee8e2e;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #2e5f9e;
+  font-size: 1.35rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #e7eef7;
+}
+
+.nav-item.active {
+  background-color: #dce8f6;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.icon-button {
+  border: 0;
+  background: transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #161616;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.icon-button:link,
+.icon-button:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.icon-button:hover {
+  background: #e7eef7;
+}
+
+
+/* To remove when we change the logout button to another spot */
+.logout-button {
+  color: #b42318;
+}
+
+.logout-button:hover {
+  background: #fee4e2;
+  color: #912018;
+}
+
+.icon-button svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  fill: currentColor;
+}
+
+.user-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid #cfd9e6;
+}
+
+/* User Profile Popup Styles */
+.profile-menu {
+  position: relative;
+  display: inline-flex;
+}
+
+.user-profile-popup {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.25rem;
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.popup-profile-card {
+  width: 320px;
+  background: white;
+  border-radius: 0.75rem;
+  padding: 0.85rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dfe5ec;
+}
+
+.popup-header-section {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.popup-avatar-container {
+  flex-shrink: 0;
+}
+
+.popup-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0f4e8b;
+  box-shadow: 0 2px 6px rgba(15, 78, 139, 0.2);
+}
+
+.popup-avatar-fallback {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0f4e8b 0%, #2e5f9e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid #0f4e8b;
+}
+
+.popup-user-info {
+  flex: 1;
+}
+
+.popup-user-name {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #161616;
+}
+
+.popup-user-email {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #999;
+  /* Keep the email on one line, truncate with ellipsis if too long */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.popup-actions {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+  justify-content: space-between;
+}
+
+.popup-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1 1 48%;
+  min-width: 0;
+}
+
+.profile-btn {
+  background: #dce8f6;
+  color: #0f4e8b;
+  border-color: #2e5f9e;
+}
+
+.profile-btn:hover {
+  background: #2e5f9e;
+  color: white;
+  box-shadow: 0 2px 8px rgba(46, 95, 158, 0.3);
+}
+
+.logout-btn {
+  background: #fee4e2;
+  color: #b42318;
+  border-color: #e67c73;
+}
+
+.logout-btn:hover {
+  background: #b42318;
+  color: white;
+  box-shadow: 0 2px 8px rgba(180, 35, 24, 0.3);
+}
+
+/* notifications */
+
+.notif-wrapper { position: relative; }
+
+.notif-badge {
+  position: absolute; top: -4px; right: -4px;
+  background: #E24B4A; color: #fff;
+  font-size: 10px; font-weight: 500;
+  border-radius: 10px; padding: 1px 5px;
+  min-width: 16px; text-align: center;
+  pointer-events: none;
+}
+
+.notif-popup {
+  position: absolute; top: calc(100% + 10px); right: 0;
+  width: 320px;
+  background: #f3f3f3;
+  border: 0.5px solid #dfe5ec;
+  border-radius: #dfe5ec;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  z-index: 200;
+  max-height: 400px; overflow-y: auto;
+}
+
+.notif-popup-header {
+  padding: 12px 16px;
+  font-size: 14px; font-weight: 500;
+  border-bottom: 0.5px solid #7b8084;
+  color: #0f4e8b;
+}
+
+.notif-item {
+  padding: 12px 16px;
+  border-bottom: 0.5px solid #b4bac0;
+  transition: background 0.15s;
+}
+
+.notif-item:hover { background: #ebeaea; }
+
+.notif-item.unread { background: #e3f2fd; }
+
+.notif-title { font-size: 13px; font-weight: 500; margin: 0 0 2px; color: #0f4e8b; }
+.notif-message { font-size: 12px; color: #161616; margin: 0 0 4px; word-break: break-word; }
+.notif-date { font-size: 11px; color: #161616; text-align: right; }
+
+.notif-empty { padding: 24px 16px; font-size: 13px; color: #161616; text-align: center; }
+
+
+@media (max-width: 980px) {
+  .app-header {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+
+  .brand {
+    font-size: 1.6rem;
+  }
+
+  .brand-logo {
+    height: 1.6rem;
+  }
+
+  .header-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-item {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .user-profile-popup {
+    right: 1rem;
+    top: 2.8rem;
+  }
+
+  .popup-profile-card {
+    width: 220px;
+  }
+}

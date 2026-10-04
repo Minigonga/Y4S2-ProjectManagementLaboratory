@@ -1,0 +1,277 @@
+.ai-suggestions-page {
+  background: #f5f7fb;
+  min-height: calc(100vh - 60px);
+  padding: 1.2rem 1rem 4rem;
+}
+
+.ai-suggestions-wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.ai-suggestions-title {
+  margin: 1.2rem 0 0.3rem;
+  font-size: 36px;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.ai-suggestions-subtitle {
+  color: #4f5f75;
+  font-size: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.ai-suggestions-state {
+  color: #7a8699;
+}
+
+.members-suggestions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.member-suggestion-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.4rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.member-suggestion-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.member-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #17355c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.member-suggestion-name {
+  margin: 0;
+  font-size: 18px;
+  color: #17355c;
+  font-weight: 600;
+}
+
+.member-suggestion-role {
+  font-size: 13px;
+  color: #7a8699;
+  text-transform: capitalize;
+}
+
+.suggested-courses-title {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #4a5568;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f0f5ff;
+  border: 1px solid #c5d4e8;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.course-chip-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.course-chip-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #17355c;
+}
+
+.course-chip-meta {
+  font-size: 12px;
+  color: #7a8699;
+}
+
+.course-remove-btn {
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.course-remove-btn:hover {
+  color: #e53e3e;
+  background: #fff5f5;
+}
+
+.add-course-section {
+  border-top: 1px solid #edf2f7;
+  padding-top: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.add-course-label {
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.add-course-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.add-course-btn {
+  background: #ffffff;
+  border: 1px solid #c5d4e8;
+  color: #224f84;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.add-course-btn:hover {
+  background: #edf4ff;
+  border-color: #4299e1;
+}
+
+.all-courses-added {
+  font-size: 13px;
+  color: #48bb78;
+  font-weight: 500;
+}
+
+.no-courses-state {
+  font-size: 14px;
+  color: #7a8699;
+  margin-bottom: 1rem;
+}
+
+.confirm-plan-bar {
+  position: sticky;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.confirm-plan-button {
+  background: #17355c;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(23, 53, 92, 0.3);
+  transition: background 0.2s;
+}
+
+.confirm-plan-button:hover {
+  background: #224f84;
+}
+
+@media (max-width: 700px) {
+  .ai-suggestions-title {
+    font-size: 26px;
+  }
+}
+
+/* FIXED: Container to handle the positioning of the dropdown */
+.search-course-container {
+  position: relative;
+  width: 100%;
+}
+
+.search-course-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bfcbe3; /* Matches CourseList border */
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #1a3976; /* Dark blue text */
+  font-size: 14px;
+}
+
+/* FIXED: Top property set to 100% to sit right under the input */
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff; /* Forced white background */
+  border: 1px solid #bfcbe3;
+  border-top: none;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  background: white; /* Ensure item background is white */
+  border: none;
+  border-bottom: 1px solid #f0f4f8;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-result-item:hover {
+  background-color: #f1f5f9;
+}
+
+.search-result-item strong {
+  color: #1a3976; /* Dark Blue for title */
+  font-size: 14px;
+  display: block;
+}
+
+.search-result-item span {
+  color: #64748b; /* Slate gray for metadata */
+  font-size: 12px;
+}
+
+.search-result-item:hover strong {
+  color: #2563eb; /* Bright blue on hover */
+}

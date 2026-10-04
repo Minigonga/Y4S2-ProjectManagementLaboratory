@@ -1,0 +1,725 @@
+.training-page {
+  background-color: #f3f4f6;
+  min-height: 100vh;
+  padding: 2rem 3rem;
+  color: #222;
+}
+
+.training-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.training-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.training-title {
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #094074;
+  text-align: left;
+}
+
+.training-tag-space {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.training-type {
+  font-size: 0.75rem;
+  justify-content: center;
+  min-width: fit-content;
+  color: #eaf0f7;
+  background-color: #3c6997;
+  min-width: 20px;
+  padding: 0.22rem 0.85rem;
+  border: 1px solid #3c6997;
+  border-radius: 999px;
+  line-height: 1;
+  gap: 0.5rem;
+  display: inline-flex;
+}
+
+.training-tags {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.training-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: fit-content;
+
+  padding: 0.20rem 0.85rem;
+  background: transparent;
+  color: #094074;
+  border: 1px solid #094074;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.training-tag::before {
+ display: none;
+}
+
+.training-location {
+  font-size: 0.75rem;
+  justify-content: center;
+  min-width: fit-content;
+  color: #094074;
+  min-width: 20px;
+  padding: 0.20rem 0.85rem;
+  border: 1px solid #094074;
+  border-radius: 999px;
+  line-height: 1;
+  gap: 0.5rem;
+  display: inline-flex;
+}
+
+.training-layout {
+  display: grid;
+  grid-template-columns: 2.2fr 0.95fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.training-layout > * {
+  min-width: 0;
+}
+
+.training-main-card {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  min-width: 0;
+}
+
+.training-main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.training-main-about {
+  margin: 0;
+  font-size: 1.40rem;
+  font-weight: 600;
+  color: #222;
+}
+
+.training-duration {
+  display: flex;
+  gap: 0.4rem;
+  color: #2f5d8a;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.clock-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-top: 0.25rem;
+}
+
+.training-description {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  text-align: justify;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.training-module-row {
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+  background-color: #fafafa;
+}
+
+.training-module-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem;
+  font-weight: 600;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+
+.training-module-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.training-module-header:hover {
+  background-color: #f1f5f9;
+}
+
+.training-module-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #eaf0f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #8ea3b8;
+  font-size: 0.8rem;
+}
+
+.training-module-title {
+  font-size: 0.90rem;
+}
+
+.training-module-check {
+  width: 24px;
+  height: 24px;
+
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.8rem;
+  color: white;
+
+  transition: all 0.2s ease;
+}
+
+.training-module-check.completed {
+  background-color: #094074;
+  border-color: #094074;
+}
+
+.training-module-content {
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.training-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.training-side-card {
+  background-color: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.training-status {
+  background-color: #f59e0b;
+  color: #111;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 0.4rem 1.5rem;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.training-side-card-title {
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 0.75rem;
+}
+
+.training-progress-text {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.training-progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.training-progress-fill {
+  width: 75%;
+  height: 100%;
+  background-color: #f59e0b;
+}
+
+.training-card-title {
+  color: green;
+}
+
+.training-button {
+  background-color: #0f4c81;
+  color: #fff;
+  border: none;
+  padding: 0.80rem 0.85rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.training-feedback-label {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.training-stars {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+
+.training-star-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  font-size: 1.8rem;
+  color: #f4b400;
+  line-height: 1;
+}
+
+.training-star-button:hover {
+  transform: scale(1.1);
+}
+
+.training-comment-input {
+  width: 100%;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  box-sizing: border-box;
+  background-color: #f3f4f6;
+  color: black;
+}
+
+.training-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.training-page {
+  flex: 1;
+  background-color: #f4f7f6;
+  padding: 40px 20px;
+}
+
+.training-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.training-top {
+  margin-bottom: 30px;
+}
+
+.training-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.training-tag-space {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.training-tag {
+  background: #e1f5fe;
+  color: #0288d1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.training-type, .training-location {
+  font-weight: bold;
+  color: #555;
+  background: #eee;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* Layout */
+.training-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+}
+
+.training-main-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Module Row Styling */
+.training-module-row {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.training-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.training-module-header:hover {
+  background: #f9f9f9;
+}
+
+.training-module-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.training-module-icon {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.training-module-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.training-module-check {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.training-module-check.completed {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+/* Expanded Content */
+.training-module-content {
+  padding: 20px;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+}
+
+.session-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.session-description-text {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.mark-attendance-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.mark-attendance-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sidebar */
+.training-side-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.training-side-card-title {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+}
+
+.training-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+  background: #ddd;
+}
+
+.training-progress-text {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.attended-count-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 4px;
+}
+
+.training-progress-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.training-progress-fill {
+  height: 100%;
+  background: #28a745;
+  transition: width 0.3s ease;
+}
+
+/* Reviews */
+
+.training-reviews-section {
+  margin-top: 48px;
+}
+
+.review-card {
+  background: #f3f4f6;
+  border: 0.5px solid #ddd;
+  border-radius: #eee;
+  padding: 1rem 1.25rem;
+  margin-bottom: 10px;
+  transition: border-color 0.15s;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: #007bff;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;           
+}
+
+.review-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+}
+
+.review-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  margin: 0 0 2px;
+  text-align: left;
+}
+
+.review-date-line {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  text-align: left;
+}
+
+.rating-pill {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #f3f4f6;
+  font-size: 13px;
+  font-weight: 500;
+  color: #222;
+  flex-shrink: 0;
+}
+.rating-pill .star-filled { color: #E9A800; font-size: 14px; }
+
+.review-comment {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #222;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 0.5px solid #ddd;
+  text-align: left;
+}
+
+/* Feedback Form */
+
+.training-comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin: 15px 0;
+  resize: vertical;
+}
+
+.training-button {
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.training-button:disabled {
+  background: #ccc;
+}
+
+.training-star-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ffc107;
+  padding: 0 2px;
+}
+
+.clock-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.review-already-submitted {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.review-already-submitted .ti-circle-check {
+  font-size: 32px;
+  color: var(--color-text-success);
+}
+
+.review-already-submitted p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .training-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.interest-action-wrapper {
+  width: 100%;
+}
+
+.interest-action-wrapper .training-button {
+  width: auto;
+  min-width: 200px;
+}
+
+/* Ensure the layout remains correct for mobile */
+@media (max-width: 850px) {
+  .training-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.training-button.interested {
+  background-color: #eaf0f7;
+  color: #0f4c81;
+  border: 1px solid #0f4c81;
+}
+
+.training-button.interested:hover {
+  background-color: #d1e1f1;
+}
+
+.interest-action-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
